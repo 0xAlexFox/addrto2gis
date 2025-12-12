@@ -1,0 +1,12 @@
+Стремянный переулок, 38/https://yandex.ru/maps/?mode=routes&rtext=~55.727242,37.626942&rtt=masstransit
+
+Стремянный переулок, 26/https://yandex.ru/maps/?mode=routes&rtext=~55.727582,37.630212&rtt=masstransit
+
+улица Большая Полянка, 30/https://yandex.ru/maps/?mode=routes&rtext=~55.734202,37.618866&rtt=masstransit
+
+Большая Татарская улица, 35с3/https://yandex.ru/maps/?mode=routes&rtext=~55.737451,37.635485&rtt=masstransit
+
+Большой Овчинниковский переулок, 23/11/https://yandex.ru/maps/?mode=routes&rtext=~55.744232,37.628119&rtt=masstransit
+
+улица Большая Ордынка, 7/https://yandex.ru/maps/?mode=routes&rtext=~55.744733,37.624948&rtt=masstransit
+
