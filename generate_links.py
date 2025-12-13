@@ -89,18 +89,34 @@ _GEOCODE_EXCEPTIONS = (
 )
 
 
-def build_yandex_link(address: str, domain: str = "yandex.ru") -> str:
-    # Universal link; opens the app on iOS if installed (via Universal Links)
-    base = f"https://{domain}/maps/"
-    # rtext: start~end, with empty start means current location
-    # mode=routes: explicitly open route builder
-    # rtt=masstransit: public transport
-    # If target looks like coordinates "lat,lon", keep comma unobscured
-    if _is_coords(address):
-        target = address.replace(" ", "")
-    else:
-        target = quote_plus(address)
-    return f"{base}?mode=routes&rtext=~{target}&rtt=masstransit"
+def _coords_to_2gis_order(text: str) -> str:
+    """
+    2GIS URLs expect longitude first, latitude second. Convert if possible.
+    If parsing fails, return the cleaned original value.
+    """
+    if not _is_coords(text):
+        return text
+    parts = text.replace(" ", "").split(",", 1)
+    if len(parts) != 2:
+        return text.replace(" ", "")
+    try:
+        lat = float(parts[0])
+        lon = float(parts[1])
+    except ValueError:
+        return text.replace(" ", "")
+    return f"{lon},{lat}"
+
+
+def build_2gis_link(coords: str) -> str:
+    """
+    Build a universal 2GIS route link from current location to given coordinates.
+    2GIS universal links open the installed app on iOS; keeping https makes them
+    usable in browsers as well.
+    """
+    cleaned = coords.replace(" ", "")
+    encoded = quote_plus(cleaned, safe=",")
+    # rsType=bus -> public transport, from/currentLocation -> "my location"
+    return f"https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/{encoded}"
 
 
 def _cache_path() -> Path:
@@ -377,7 +393,7 @@ def main(argv):
 
     parser = argparse.ArgumentParser(
         description=(
-            "Generate Yandex Maps deep links (public transport) for a list of addresses."
+            "Generate 2GIS route links (public transport) for a list of addresses."
         )
     )
     parser.add_argument(
@@ -389,13 +405,8 @@ def main(argv):
     parser.add_argument(
         "-o",
         "--output",
-        default="links.csv",
-        help="Output CSV file path (default: links.csv)",
-    )
-    parser.add_argument(
-        "--domain",
-        default="yandex.ru",
-        help="Yandex domain to use (yandex.ru or yandex.com). Default: yandex.ru",
+        default="links.txt",
+        help="Output file path (default: links.txt)",
     )
     parser.add_argument(
         "--geocoder",
@@ -416,7 +427,7 @@ def main(argv):
     parser.add_argument(
         "--format",
         choices=["csv", "pairs"],
-        default="csv",
+        default="pairs",
         help="Output format: csv (Address,Link) or pairs (Address/Link) per line",
     )
 
@@ -440,14 +451,15 @@ def main(argv):
             coords = geocode_to_coords(query, prefer=args.geocoder, apikey=(args.apikey or None))
             if coords:
                 target = f"{coords[0]},{coords[1]}"
-        link = build_yandex_link(target, args.domain)
+        target_for_link = _coords_to_2gis_order(target)
+        link = build_2gis_link(target_for_link)
         rows.append((label, link))
 
     out_path = Path(args.output)
     if args.format == "csv":
         with out_path.open("w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
-            writer.writerow(["Address", "YandexMapsLink"])
+            writer.writerow(["Address", "TwoGISLink"])
             writer.writerows(rows)
     else:
         with out_path.open("w", encoding="utf-8") as f:

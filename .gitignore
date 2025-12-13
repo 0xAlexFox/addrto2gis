@@ -1,0 +1,9 @@
+addresses.txt
+geocache.json
+links.txt
+yandex_api_key.py
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/

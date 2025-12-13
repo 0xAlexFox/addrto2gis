@@ -1,12 +1,12 @@
-Стремянный переулок, 38/https://yandex.ru/maps/?mode=routes&rtext=~55.727242,37.626942&rtt=masstransit
+Стремянный переулок, 38/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.626942,55.727242
 
-Стремянный переулок, 26/https://yandex.ru/maps/?mode=routes&rtext=~55.727582,37.630212&rtt=masstransit
+Стремянный переулок, 26/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.630212,55.727582
 
-улица Большая Полянка, 30/https://yandex.ru/maps/?mode=routes&rtext=~55.734202,37.618866&rtt=masstransit
+улица Большая Полянка, 30/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.618866,55.734202
 
-Большая Татарская улица, 35с3/https://yandex.ru/maps/?mode=routes&rtext=~55.737451,37.635485&rtt=masstransit
+Большая Татарская улица, 35с3/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.635485,55.737451
 
-Большой Овчинниковский переулок, 23/11/https://yandex.ru/maps/?mode=routes&rtext=~55.744232,37.628119&rtt=masstransit
+Большой Овчинниковский переулок, 23/11/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.628119,55.744232
 
-улица Большая Ордынка, 7/https://yandex.ru/maps/?mode=routes&rtext=~55.744733,37.624948&rtt=masstransit
+улица Большая Ордынка, 7/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.624948,55.744733
 
