@@ -1,12 +1,16 @@
-Стремянный переулок, 38/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.626942,55.727242
+Лазоревый проезд, 1Ак3/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.637578,55.8473
 
-Стремянный переулок, 26/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.630212,55.727582
+улица Вильгельма Пика, 11/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.636958,55.844197
 
-улица Большая Полянка, 30/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.618866,55.734202
+Лесная улица, 1/2/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.585511,55.776892
 
-Большая Татарская улица, 35с3/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.635485,55.737451
+2-я Брестская улица, 48/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.584712,55.774968
 
-Большой Овчинниковский переулок, 23/11/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.628119,55.744232
+Шмитовский проезд, 10/7/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.552696,55.759167
 
-улица Большая Ордынка, 7/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.624948,55.744733
+Мичуринский проспект, вл27/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.500207,55.697463
+
+улица Юлиана Семёнова, 8к2/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.392634,55.643856
+
+улица Спиридоновка, 25/20с1/https://2gis.ru/routeSearch/rsType/bus/from/currentLocation/to/37.589087,55.762713
 
